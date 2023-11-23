@@ -86,17 +86,24 @@ body {
         .plan-price{
             margin: 2rem 0;
             text-align: center;
+            position: relative;
+            display: flex;
+            align-items: end;
+            justify-content: center;
         }
 
-        #price{
+        .price{
             font-size: 3rem;
             font-weight: bold;
         }
 
-        #dollar{
-            position: absolute;
-            left: 18rem;
+        .dollar{
+            /*display: inline;*/
+            align-self: start;
+            left: 3.5rem;
             font-size: 1.5rem;
+
+            /*padding-bottom: -5rem;*/
         }
 
         #price-hr{
@@ -153,16 +160,7 @@ body {
         }
 
  /*section for card 2- standard */
-        #price-s{
-            font-size: 3rem;
-            font-weight: bold;
-        }
 
-        #dollar-s{
-            position: absolute;
-            left: 39.3rem;
-            font-size: 1.5rem;
-        }
 
         #price-hr-s{
             height: 0.3px;
@@ -201,17 +199,6 @@ body {
     }
 
 /*section for card 3- premium */
-
-#price-p{
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-#dollar-p{
-    position: absolute;
-    right: 27.7rem;
-    font-size: 1.5rem;
-}
 
 #price-hr-p{
     height: 0.3px;
@@ -252,13 +239,14 @@ body {
 
 
 /* Hint: What can you do with a media query and flexbox? */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     .pricing-container{
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 3rem;
         margin-top: 5rem;
+        padding: 0 7rem;
     }
 
     .pricing-plan{
@@ -275,13 +263,11 @@ body {
         padding: 1rem 0;
     }
 
-    /*cards section now */
-    #dollar-s{
-        position: absolute;
-        left: 39.3rem;
-        font-size: 1.5rem;
+    p{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.8rem  1rem 0 1rem;
+        line-height: 1.7;
     }
-
-
 
 }
