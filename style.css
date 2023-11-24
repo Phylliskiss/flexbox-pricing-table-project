@@ -1,3 +1,4 @@
+/*style section - for naming my colors*/
 :root {
     --body-color:#FCF6F5;
     --white: white;
@@ -11,33 +12,32 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--body-color);
 }
-.pricing-container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 5rem;
-    margin-top: 10rem;
 
+/*this code is an incredibly easy way to center things in the middle with flexbox*/
+    .pricing-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 3rem;
+    }
+
+/*style section - cards section code for all*/
+    .pricing-plan{
+        max-width: 300px;
+        border-radius: 22px;
+        background-color: var(--white);
+        text-align: center;
+        box-shadow:  8px 8px 16px #a0999e,
+        -8px -8px 16px #ffffff;
 }
 
-.pricing-plan{
-    border: 0 solid transparent;
-    border-radius: 22px;
-    background-color: var(--white);
-    flex-basis: 17rem;
-    box-shadow:  8px 8px 16px #a0999e,
-    -8px -8px 16px #ffffff;
-    /*margin-top: 10rem;*/
-}
-
-/*section for card 1- basic*/
+/*style section - title section for all*/
         .plan-title{
-            border: 1px solid inherit;
-            height: 8rem;
+            border: 1px solid inherit; /* removes the borderline color and makes it same as the container color*/
+            padding: 20px; /*gives space around it instead of height*/
             border-top-left-radius: 22px;
             border-top-right-radius: 22px;
-            text-align: center;
-            padding-top: 1.5rem ;
         }
 
         p, h1 {
@@ -69,27 +69,15 @@ body {
             line-height: 1.7;
         }
 
-
-        #basic{
-            background-image:var(--basic);
-        }
-
-        .standard{
-            background-image: var(--standard);
-
-        }
-
-        .premium{
-            background-image: var(--premium);
-        }
-
+/*style section - Price section for all */
         .plan-price{
             margin: 2rem 0;
-            text-align: center;
-            position: relative;
             display: flex;
-            align-items: end;
+            align-items: end; /* this aligned the /mo in the price to the bottom*/
             justify-content: center;
+            /* this is just to help with the $ sign staying up there
+            I could have also applied positive - relative and applied position absolute
+            on the dollar sign to get same result*/
         }
 
         .price{
@@ -98,71 +86,12 @@ body {
         }
 
         .dollar{
-            /*display: inline;*/
-            align-self: start;
+            align-self: start; /* this aligned the $ in the price to the top*/
             left: 3.5rem;
             font-size: 1.5rem;
-
-            /*padding-bottom: -5rem;*/
         }
 
-        #price-hr{
-            height: 0.3px;
-            background-color: #dcdbdb;
-            border: 1px solid #dcdbdb;
-            border-radius: 3rem;
-            align-items: center;
-            box-shadow:  17px 17px 44px #c2c1c1,
-            -17px -17px 44px #f6f5f5;
-            font-weight: lighter;
-            margin: -0.5rem 7rem 1.8rem 4.5rem;
-        }
-
-
-        li{
-            list-style: none;
-            font-size: 0.9rem;
-        }
-
-        .plan-features{
-            text-align: justify;
-            margin-bottom: 3rem;
-            font-size: 200;
-            font-style: normal;
-        }
-
-        .user-feature{
-            margin: 0.5rem 0;
-        }
-
-        .bulleting{
-            height: 1rem;
-            width:1rem;
-            background-image: var(--basic);
-            border-radius: 1rem;
-            border: 0 solid transparent;
-            color: white;
-            padding: 0.5px;
-            margin: 5px;
-        }
-
-        .plan-button{
-            background-image: var(--basic);
-            color: var(--white);
-            padding: 0.5rem 2rem;
-            border: 0 solid transparent;
-            border-radius: 13px;
-            margin: 0 2rem 2rem;
-            font-size: 1.1rem;
-            font-weight: 300;
-            box-shadow:  8px 8px 16px #a0999e,
-            -8px -8px 16px #ffffff;
-        }
-
- /*section for card 2- standard */
-
-
-        #price-hr-s{
+        .price-hr{
             height: 0.3px;
             background-color: #dcdbdb;
             border: 1px solid #dcdbdb;
@@ -174,10 +103,27 @@ body {
             margin: -0.5rem 6rem 1.8rem 4.5rem;
         }
 
-        .bulleting-s{
+
+/*style section - plan features for all */
+        .plan-features{
+            text-align: justify;
+            margin-bottom: 3rem;
+            font-style: normal;
+        }
+
+        li{
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+
+        .user-feature{
+            margin: 0.5rem 0;
+        }
+
+        .bulleting{
             height: 1rem;
             width:1rem;
-            background-image: var(--standard);
             border-radius: 1rem;
             border: 0 solid transparent;
             color: white;
@@ -185,89 +131,75 @@ body {
             margin: 5px;
         }
 
-    .plan-button-s{
-        background-image: var(--standard);
-        color: var(--white);
-        padding: 0.5rem 2rem;
-        border: 0 solid transparent;
-        border-radius: 13px;
-        margin: 0 2rem 2rem;
-        font-size: 1.1rem;
-        font-weight: 300;
-        box-shadow:  8px 8px 16px #a0999e,
-        -8px -8px 16px #ffffff;
-    }
 
-/*section for card 3- premium */
-
-#price-hr-p{
-    height: 0.3px;
-    background-color: #dcdbdb;
-    border: 1px solid #dcdbdb;
-    border-radius: 3rem;
-    align-items: center;
-    box-shadow:  17px 17px 44px #c2c1c1,
-    -17px -17px 44px #f6f5f5;
-    font-weight: lighter;
-    margin: -0.5rem 6rem 1.8rem 4.5rem;
-}
+/*sign up button for all */
+        .plan-button{
+            color: var(--white);
+            padding: 0.5rem 2rem;
+            border: none; /* removes any color of border*/
+            border-radius: 13px;
+            margin: 0 2rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 300;
+            box-shadow:  8px 8px 16px #a0999e,
+            -8px -8px 16px #ffffff;
+        }
 
 
-.bulleting-p{
-    height: 1rem;
-    width:1rem;
-    background-image: var(--standard);
-    border-radius: 1rem;
-    border: 0 solid transparent;
-    color: white;
-    padding: 0.5px;
-    margin: 5px;
-}
 
-.plan-button-p{
-    background-image: var(--premium);
-    color: var(--white);
-    padding: 0.5rem 2rem;
-    border: 0 solid transparent;
-    border-radius: 13px;
-    margin: 0 2rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 300;
-    box-shadow:  8px 8px 16px #a0999e,
-    -8px -8px 16px #ffffff;
-}
+/*style section for card 1- basic*/
+
+        #basic{
+            background-image:var(--basic);
+        }
+
+        .bullet-b{
+            background-image: var(--basic);
+
+        }
+
+        .button-b{
+            background-image: var(--basic);
+        }
+
+
+ /* style section for card 2- standard */
+        .standard{
+            background-image: var(--standard);
+
+        }
+        .bullet-s {
+            background-image: var(--standard);
+        }
+
+        .button-s{
+                background-image: var(--standard);
+            }
+
+/*style  section for card 3- premium */
+
+            .premium{
+                background-image: var(--premium);
+            }
+
+            .bullet-p{
+                background-image: var(--premium);
+            }
+
+
+            .button-p{
+                background-image: var(--premium);
+            }
 
 
 /* Hint: What can you do with a media query and flexbox? */
-@media (max-width: 600px) {
+@media (max-width: 1250px) {
     .pricing-container{
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 3rem;
-        margin-top: 5rem;
-        padding: 0 7rem;
-    }
+        height: 100%;
 
-    .pricing-plan{
-        border: 0 solid transparent;
-        border-radius: 22px;
-        background-color: var(--white);
-        flex-basis: 100%;
-        box-shadow:  8px 8px 16px #a0999e,
-        -8px -8px 16px #ffffff;
-        margin-top: 2rem;
     }
-
-    .plan-title {
-        padding: 1rem 0;
-    }
-
-    p{
-        font-size: 1rem;
-        text-align: center;
-        padding: 0.8rem  1rem 0 1rem;
-        line-height: 1.7;
-    }
+/*    I had issues with this initially and I wrote a lot of css with borders and margine
+but setting max-width and height to 100vh for the horizontal and to 100% in the vertical resolved all these */
 
 }
