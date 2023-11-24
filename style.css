@@ -186,7 +186,6 @@ body {
                 background-image: var(--premium);
             }
 
-
             .button-p{
                 background-image: var(--premium);
             }
@@ -197,7 +196,6 @@ body {
     .pricing-container{
         flex-direction: column;
         height: 100%;
-
     }
 /*    I had issues with this initially and I wrote a lot of css with borders and margine
 but setting max-width and height to 100vh for the horizontal and to 100% in the vertical resolved all these */
