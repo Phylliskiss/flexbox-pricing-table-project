@@ -73,7 +73,7 @@ body {
         .plan-price{
             margin: 2rem 0;
             display: flex;
-            align-items: end; /* this aligned the /mo in the price to the bottom*/
+            align-items: end; /* this aligned the figure and /mo in the price to the bottom*/
             justify-content: center;
             /* this is just to help with the $ sign staying up there
             I could have also applied positive - relative and applied position absolute
@@ -136,7 +136,7 @@ body {
         .plan-button{
             color: var(--white);
             padding: 0.5rem 2rem;
-            border: none; /* removes any color of border*/
+            border: none; /* removes any color on border, which transparent doesn't do*/
             border-radius: 13px;
             margin: 0 2rem 2rem;
             font-size: 1.1rem;
@@ -149,44 +149,20 @@ body {
 
 /*style section for card 1- basic*/
 
-        #basic{
+        #basic, .bullet-b, .button-b {
             background-image:var(--basic);
-        }
-
-        .bullet-b{
-            background-image: var(--basic);
-
-        }
-
-        .button-b{
-            background-image: var(--basic);
         }
 
 
  /* style section for card 2- standard */
-        .standard{
-            background-image: var(--standard);
-
-        }
-        .bullet-s {
+        .standard, .bullet-s, .button-s{
             background-image: var(--standard);
         }
 
-        .button-s{
-                background-image: var(--standard);
-            }
 
 /*style  section for card 3- premium */
 
-            .premium{
-                background-image: var(--premium);
-            }
-
-            .bullet-p{
-                background-image: var(--premium);
-            }
-
-            .button-p{
+            .premium, .bullet-p, .button-p{
                 background-image: var(--premium);
             }
 
@@ -197,7 +173,7 @@ body {
         flex-direction: column;
         height: 100%;
     }
-/*    I had issues with this initially and I wrote a lot of css with borders and margine
+/*    I had issues with this initially and I wrote a lot of css with borders and margins
 but setting max-width and height to 100vh for the horizontal and to 100% in the vertical resolved all these */
 
 }
